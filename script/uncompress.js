@@ -46,8 +46,9 @@
   $(window).on('load', function () {
   
   $.ajax({
-    url: "http://ip-api.com/json/",
-    dataType: "json",
+    url: "https://geolocation-db.com/jsonp",
+    jsonpCallback: "callback",
+    dataType: "jsonp",
     success: function (location) {
       var data = new Date(),
         dia = data.getDate().toString().padStart(2, '0'),
